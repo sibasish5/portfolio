@@ -616,7 +616,7 @@ function AboutSection() {
             initial={{ opacity: 0, x: -50 }} 
             animate={inView ? { opacity: 1, x: 0 } : {}} 
             transition={{ delay: 0.2 }} 
-            className="h-[380px] w-[33rem] glass-card rounded-l-2xl rounded-r-none overflow-hidden flex items-center justify-center relative border-r-0 ml-auto"
+            className="h-[380px] w-full md:w-[33rem] glass-card md:rounded-l-2xl md:rounded-r-none rounded-2xl overflow-hidden flex items-center justify-center relative md:border-r-0 md:ml-auto"
           >
             {/* Floating tech icons */}
             <div className="relative w-full h-full flex items-center justify-center">
@@ -715,7 +715,7 @@ function SkillsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* 3D Chart */}
-          <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.3 }} className="h-[380px] w-[33rem] glass-card rounded-l-2xl rounded-r-none overflow-hidden ml-auto">
+          <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.3 }} className="h-[380px] w-full lg:w-[33rem] glass-card lg:rounded-l-2xl lg:rounded-r-none rounded-2xl overflow-hidden lg:ml-auto">
             <Canvas camera={{ position: [0, 3, 6], fov: 50 }}>
               <ambientLight intensity={0.3} />
               <pointLight position={[10, 10, 10]} intensity={1} />
