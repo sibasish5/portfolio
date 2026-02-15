@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg, #0f172a 0%, #020617 100%); color: white; overflow-x: hidden; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #0ea5e9, #8b5cf6); border-radius: 4px; }
+
+@layer components {
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-accent-500 to-pink-500; }
+  .btn-primary { @apply px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-accent-600 hover:from-primary-400 hover:to-accent-500 transform hover:scale-105 transition-all duration-300; }
+  .btn-secondary { @apply px-8 py-3 rounded-xl font-semibold border-2 border-primary-500/50 text-primary-400 hover:bg-primary-500/10 transform hover:scale-105 transition-all duration-300; }
+}
